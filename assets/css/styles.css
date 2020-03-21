@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import "reset.css";
+@import "bootstrap/css/bootstrap.min.css";
+@import "plugins/datatables.min.css";
+@import "app.css";
+:root{
+    /*Colors*/
+    /*--primary-color: #18376e;*/
+    --primary-color: #02A859;
+    --secondary-color: #9aaeeb;
+    --red-color: #F91414;
+    --gray:#bdbdbd;
+    --ligt-gray:#F9F9F9;
+    --white:#FFFFFF;
+    --accent-color:#E7DE17;
+    /*Fonts*/
+    --body-font-family: '';
+    --title-font-family:'';
+    --sub-title-font-title:'';
+    --body-font-size: 1em;
+    --transition:0.75s;
+}
+
+

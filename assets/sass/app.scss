@@ -1,0 +1,261 @@
+.wrapper{
+  .banner{
+    background-image: linear-gradient(90deg, #02A859,rgba(2,168,89,.5)), url('../images/banner.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .tips{
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: rgba(16, 14, 23, 0.25) 0px 0px 30px;
+
+      ol {
+        list-style: none;
+        counter-reset: my-awesome-counter;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 1rem 0;
+      }
+      ol li {
+        counter-increment: my-awesome-counter;
+        display: flex;
+        width: 50%;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+      ol li::before {
+        content: "0" counter(my-awesome-counter);
+        font-weight: bold;
+        font-size: 3rem;
+        margin-right: 0.5rem;
+        font-family: 'Abril Fatface', serif;
+        line-height: 1;
+      }
+
+
+      h3{
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+      .coronavirus{
+        color: var(--red-color);
+      }
+
+      .safe{
+        color: var(--gray);
+        text-align: center;
+      }
+    }
+
+    .banner-tracker-title{
+      h2{
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+      h4{
+        color: white;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .main{
+    padding: 4rem 0;
+    & .info{
+      display: flex;
+      .coronavirus-countries-data,.coronavirus-data-table{
+        padding: 1rem;
+      }
+
+      .coronavirus-data-table{
+        width: 80%;
+      }
+
+      & .coronavirus-countries-data{
+        transform: translateY(-160px);
+        & .world-data{
+          box-shadow: rgba(16, 14, 23, 0.25) 0px 0px 30px;
+          background-color: white;
+          margin-bottom: 2rem;
+          padding: 2rem 1rem;
+          border-radius: 8px;
+          h4{
+            font-weight: 600;
+            color: rgba(249,20,20,.7);
+          }
+          ul{
+            box-sizing: border-box;
+            padding-top: 1rem;
+            border-left: 0.2rem rgba(2,168,98,.5) solid;
+
+            li{
+              padding: 0.565rem 1rem;
+              &:first-child{
+                padding-top: 0;
+              }
+            }
+          }
+        }
+
+        & .nigeria-data{
+          background-color: var(--primary-color);
+          padding: 2rem 1rem;
+          box-shadow: rgba(16, 14, 23, 0.25) 0px 0px 30px;
+          margin-bottom: 2rem;
+          border-radius: 8px;
+          h4{
+            font-weight: 600;
+            color: var(--accent-color);
+          }
+          ul{
+            box-sizing: border-box;
+            padding-top: 1rem;
+            border-left: 0.2rem rgba(255,255,255,.5) solid;
+            color: white;
+            li{
+              padding: 0.565rem 1rem;
+              &:first-child{
+                padding-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .banner{
+      .tips{
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 6px;
+        box-shadow: rgba(16, 14, 23, 0.25) 0px 0px 30px;
+
+        ol {
+          list-style: none;
+          counter-reset: my-awesome-counter;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 1rem 0;
+        }
+        ol li {
+          counter-increment: my-awesome-counter;
+          display: flex;
+          width: 100%;
+          font-size: 0.8rem;
+          margin-bottom: 0.5rem;
+        }
+        ol li::before {
+          content: "0" counter(my-awesome-counter);
+          font-weight: bold;
+          font-size: 2rem;
+          margin-right: 0.5rem;
+          font-family: 'Abril Fatface', serif;
+          line-height: 1;
+        }
+
+
+        h3{
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+        .coronavirus{
+          color: var(--red-color);
+        }
+
+        .safe{
+          color: var(--gray);
+          text-align: center;
+        }
+      }
+
+      .banner-tracker-title{
+        padding: 2rem 0;
+        h2{
+          color: var(--accent-color);
+          font-weight: 600;
+          font-size: 1.7rem;
+        }
+        h4{
+          color: white;
+          font-size: 0.8765rem;
+        }
+      }
+    }
+
+    .main{
+      padding: 4rem 0;
+      & .info{
+        display: flex;
+        flex-direction: column;
+
+        .coronavirus-data-table{
+          width: 100%;
+          order: 1;
+        }
+
+        & .coronavirus-countries-data{
+          order: 0;
+          transform: translateY(-130px);
+          & .world-data{
+            h4{
+              font-weight: 600;
+              color: rgba(249,20,20,.7);
+            }
+            ul{
+              box-sizing: border-box;
+              padding-top: 1rem;
+              border-left: 0.2rem rgba(2,168,98,.5) solid;
+
+              li{
+                padding: 0.565rem 1rem;
+                &:first-child{
+                  padding-top: 0;
+                }
+              }
+            }
+          }
+
+          & .nigeria-data{
+            background-color: var(--primary-color);
+            padding: 2rem 1rem;
+            box-shadow: rgba(16, 14, 23, 0.25) 0px 0px 30px;
+            margin-bottom: 0;
+            border-radius: 8px;
+            h4{
+              font-weight: 600;
+              color: var(--accent-color);
+            }
+            ul{
+              box-sizing: border-box;
+              padding-top: 1rem;
+              border-left: 0.2rem rgba(255,255,255,.5) solid;
+              color: white;
+              li{
+                padding: 0.565rem 1rem;
+                &:first-child{
+                  padding-top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    background-color: #047C43;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+}
